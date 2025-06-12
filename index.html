@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: black;
+    background: transparent;
+}
+.main{
+    background-image: url(Assets/Images/bg.jpg);
+    background-position: center center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* object-fit:fill; */
+    height: 99vh;    
+    padding-bottom: 30px;
+    /* position: relative; */
+}
+.main .blur{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 12, 12);
+    opacity: 0.6;
+    color: aliceblue;
+    position: absolute;
+    top: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: auto;
+    height: 62px;
+    padding: 15px;
+    z-index: 10;
+    position: relative;
+}
+nav img{
+    height: 48px;
+    position: relative;
+    
+}
+nav button{
+    padding: 9px 15px;
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    border: transparent;
+    color: white;
+    /* position: relative; */
+}
+.text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 205px;
+    position: relative;
+    text-align: center;
+    font-family: sans-serif;
+    max-width: (100%-3rem);
+    gap: 23px;
+}
+.text :nth-child(1){
+    font-weight: 900;
+    font-size: 3rem;
+    /* position: relative; */
+}
+.text :nth-child(2){
+    font-size: 25px;
+}
+.text :nth-child(3){
+    font-size: 19px;
+}
+.input{
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 0;
+    justify-content: center;      
+    margin-bottom: 5%;
+    gap: 10vw;
+}
+.input :nth-child(1){    
+    font-size: 20px;
+    padding: 0.4%;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    opacity: 0.6;
+    border-radius: 5px;
+    max-width: 300px;
+
+}
+.input :nth-child(1) input {
+    padding: 8% 51% 8% 11%;
+    width: 16vw;
+    height: auto;
+    font-size: 15px;
+    border: 1px solid rgb(88, 85, 85);
+    opacity: 100%;
+    color: rgb(248, 245, 245, 0.9);
+    background-color: rgb(7, 7, 7);
+}
+.input> :nth-child(2){
+    background-color: rgb(236, 0, 0);
+    padding: 0.8%;
+    height: auto;
+    width: auto;
+    position: relative;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    /* max-width: 25px; */
+}
+.separation-1{
+    height: 11px;
+    background-color: rgb(44, 44, 44);
+    /* margin-top:4%;    */
+    position: relative;
+}
+.tv{
+    display: flex;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    /* margin-top: 170px; */
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* flex-direction: column; */
+}
+.tv-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-left: -27%;
+}
+.tv-text2{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-left: 51%;
+}
+.tv img{
+     position: absolute;
+    width: 26vw;
+    height: 47vh;
+    top: 1px;
+    right: 13%;
+    max-width: 600px;
+    z-index: 10;
+}
+.tv .image2 img{
+    left: 18%;
+}
+.tv video{
+    position: absolute;
+    width: 26vw;
+    height: 47vh;
+    top: 1px;
+    right: 13%;
+    max-width: 600px;
+    z-index: 1;
+}
+.tv-text :nth-child(1){
+    font-size: 3rem;
+    font-weight: 900;
+    max-width: 67%;
+}
+.tv-text :nth-child(2){
+    margin-top: 10px;
+    font-size: 25px;
+}
+.tv-text :nth-child(3){
+    font-size: 25px;
+    max-width: 84%;
+}
+.tv-text2 :nth-child(1){
+    font-size: 3rem;
+    font-weight: 900;
+    max-width: 67%;
+}
+.tv-text2 :nth-child(2){
+    margin-top: 10px;
+    font-size: 25px;
+    max-width: 84%;
+}
+.tv-text2 :nth-child(3){
+    font-size: 20px;
+    max-width: 84%;
+}
+.grid{
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.grid .boxes{
+    background-color: rgb(44, 44, 44);
+    height: 20px;
+    width: 60vw;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 5px solid black;
+    /* align-items: center; */
+    justify-content: center;
+}
+.grid .text2{
+    margin-top: 50px;
+    font-size: 1.23rem;
+}
+.tv2{
+    display: flex;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    /* margin-top: 170px; */
+    height: 150%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+.grid .text1{
+    font-size: 3rem;
+    font-weight: 900;
+    position: relative;
+    margin-top: -5%;
+    margin-bottom: 1%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <span><img src="Assets/Images/logo.svg" alt=""></span>
+            <div><button>Sign In</button></div>
+        </nav>
+        <div class="blur"></div>
+        <div class="text">
+            <div class="text1">Unlimited movies, TV shows, and more</div>
+            <div class="text2">Watch anywhere. Cancel anytime</div>
+            <div class="text3">Ready to watch? Enter your email to create or restart your membership.</div>
+        </div>
+        <div class="input">
+            <div class="email"><input type="text" placeholder="Email address" ></div>
+            <div class="button">Get Started ></div>
+        </div>
+        <div class="separation-1"></div>
+        <div class="tv">
+            <div class="tv-text">
+                <div class="text1">Enjoy on your TV</div>
+                <div class="text2">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple</div>
+                <div class="text3">TV, Blu-ray players, and more.</div>
+            </div>
+            <div class="image">
+                <img src="Assets/Images/tv.png" alt="" >
+                <video src="Assets/Videos/video-tv.m4v" autoplay loop muted></video>
+            </div>
+        </div>
+        <div class="separation-1"></div>
+        <div class="tv">
+            <div class="image2">
+                <img src="Assets/Images/mobile.jpg" alt="" >
+            </div>
+            <div class="tv-text2">
+                <div class="text1">Download your shows to watch offline</div>
+                <div class="text2">Save your favorites easily and always have something to 
+                </div>
+                <div class="text3">watch.</div>
+            </div>
+        </div>
+        <div class="separation-1"></div>
+        <div class="tv">
+            <div class="tv-text">
+                <div class="text1">Watch everywhere</div>
+                <div class="text2">Stream unlimited movies and TV </div>
+                <div class="text3">shows on your phone, tablet, laptop, and TV..</div>
+            </div>
+        </div>
+        <div class="separation-1"></div>
+        <div class="tv">
+            <div class="image2">
+                <img src="Assets/Images/kids.png" alt="" >
+            </div>
+            <div class="tv-text2">
+                <div class="text1">Create profiles for kids</div>
+                <div class="text2">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
+                </div>
+            </div>
+        </div>
+        <div class="separation-1"></div>
+        <div class="tv2">            
+            <div class="grid">
+                <div class="text1">Frequently Asked Questions</div>
+                <div class="boxes">What is Neflix?</div>
+                <div class="boxes">How much does netflix cost?</div>
+                <div class="boxes">Where Can I watch?</div>
+                <div class="boxes">How Do I cancel</div>
+                <div class="boxes">What can I watch in Netflix?</div>
+                <div class="boxes last">Is Netflix good for kids?</div>
+                <div class="text2">Ready to watch? Enter your email to create or restart your membership.</div>
+                
+            </div>
+            <div class="input">
+                <div class="email"><input type="text" placeholder="Email address" ></div>
+                <div class="button">Get Started ></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
